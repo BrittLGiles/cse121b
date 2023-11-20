@@ -68,10 +68,13 @@ document.querySelector('#array').textContent = numbersArray;
 document.querySelector('#odds').textContent = numbersArray.filter(num => num % 2 === 1);
 /* Output Evens Only Array */
 document.querySelector('#evens').textContent = numbersArray.filter(num => num % 2 === 0);
-/* Output Sum of Org. Array */
-document.querySelector('#sumOfArray').textContent = numbersArray.reduce(sumFunction);
+/* Output Sum of Multiplied by 2 Array */
+document.querySelector('#sumOfArray').textContent = numbersArray.map(num => num * 2).reduce(sumFunction);
 function sumFunction(total, num){
     return total + num;
 }
 /* Output Multiplied by 2 Array */
 document.querySelector('#multiplied').textContent = numbersArray.map(num => num * 2);
+
+/* Output sumOfMultiplied */
+document.querySelector('#sumOfMultiplied').textContent = numbersArray.map(num => num * 2).reduce(sumFunction)*2;
